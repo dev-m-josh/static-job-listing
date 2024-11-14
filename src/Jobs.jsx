@@ -31,13 +31,12 @@ export default function Jobs() {
     }));
   };
 
-  console.log(filters)
-
   return (
     <div className="jobs">
       <div className="filters">
         {/* Filter for job role */}
         <select
+          className='role'
           name="role" // Name of the filter 
           value={filters.role} // The current value of this filter
           onChange={handleFilterChange}
@@ -50,6 +49,7 @@ export default function Jobs() {
 
         {/* Filter for languages */}
         <select
+          className='language'
           name="languages" // Name of the filter 
           value={filters.languages} // The current value of this filter
           onChange={handleFilterChange}
