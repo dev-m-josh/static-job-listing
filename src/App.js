@@ -3,9 +3,12 @@ import Jobs from './Jobs';
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <div className='top'>
+        <img src='/images/bg-header-desktop.svg' alt='top-image'/>
+      </div>
       <Jobs/>
-    </div>
+    </>
   );
 }
 
