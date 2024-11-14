@@ -9,6 +9,7 @@ export default function Jobs() {
     languages: '' // filter for languages
   });
 
+  
   // Filter the job data based on the selected filter criteria
   const filteredJobs = data.filter((job) => {
     return (
@@ -29,6 +30,8 @@ export default function Jobs() {
       [name]: value, //update the correct filter
     }));
   };
+
+  console.log(filters)
 
   return (
     <div className="jobs">
@@ -58,8 +61,6 @@ export default function Jobs() {
           <option value="Python">Python</option>
           <option value="Ruby">Ruby</option>
         </select>
-
-        <h4>Clear</h4>
       </div>
 
       {/* Display the filtered job listings */}
@@ -70,7 +71,9 @@ export default function Jobs() {
             <div className="user-details">
               <img src={job.logo} alt={job.company} />
               <div className="details">
-                <h4>{job.company}</h4>
+                <div className='company'>
+                  <h4>{job.company}</h4>
+                </div>
                 <h3 className="job-title">{job.position}</h3>
                 <div className="work-details">
                   <p>{job.postedAt}</p>
@@ -86,7 +89,7 @@ export default function Jobs() {
               <h4>{job.level}</h4>
               <ul className="language-list">
                 {job.languages.map((language, index) => (
-                  <li key={index}>{language}</li>
+                  <h4 key={index}>{language}</h4>
                 ))}
               </ul>
               <h4>{job.tools.join(' ')}</h4>

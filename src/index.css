@@ -7,8 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
   min-height: 100vh;
-  background-image: url('/public/images/bg-header-desktop.svg');
-  background-repeat: no-repeat;
   background-color: hsl(180, 52%, 96%);
 }
